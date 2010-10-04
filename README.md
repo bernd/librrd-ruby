@@ -31,8 +31,9 @@ Make sure you have the development package of `librrd` installed.
 
 # Contribute
 
-Please test the gem on different systems and report success and/or failure.
-Open issues and/or submit pull requests with fixes.
+Please test the gem on different systems with different RRDtool versions
+and report success and/or failure. Open issues and/or submit pull
+requests with fixes.
 
 Thank you!
 
