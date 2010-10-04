@@ -29,6 +29,10 @@ Open issues and/or submit pull requests with fixes.
 
 Thank you!
 
+# Links
+
+* Source: http://github.com/bernd/librrd-ruby
+
 # Maintainer
 
 Bernd Ahlers <bernd@tuneafish.de>
