@@ -42,7 +42,7 @@ Thank you!
 
 # Maintainer
 
-Bernd Ahlers <bernd@tuneafish.de>
+Bernd Ahlers
 
 # Copyright
 
