@@ -57,16 +57,20 @@ end
 puts
 
 # xport method test
-puts "xporting data from #{rrd}"
-(fstart,fend,step,col,legend,data)=RRD.xport(
-	"--start", start_time.to_s, 
-	"--end", (start_time + 300 * 300).to_s, 
-	"--step", 10.to_s, 
-	"DEF:A=#{rrd}:a:AVERAGE",
-	"DEF:B=#{rrd}:b:AVERAGE",
-	"XPORT:A:a",
-	"XPORT:B:b")
-puts "Xported #{col} columns(#{legend.join(", ")}) with #{data.length} rows from #{fstart} to #{fend} and step #{step}\n"
+if RRD.respond_to?(:xport)
+  puts "xporting data from #{rrd}"
+  (fstart,fend,step,col,legend,data)=RRD.xport(
+    "--start", start_time.to_s, 
+    "--end", (start_time + 300 * 300).to_s, 
+    "--step", 10.to_s, 
+    "DEF:A=#{rrd}:a:AVERAGE",
+    "DEF:B=#{rrd}:b:AVERAGE",
+    "XPORT:A:a",
+    "XPORT:B:b")
+  puts "Xported #{col} columns(#{legend.join(", ")}) with #{data.length} rows from #{fstart} to #{fend} and step #{step}\n"
+else
+  puts "Skipping xport test, method not available."
+end
 
 print "This script has created #{name}.png in the current directory\n";
 print "This demonstrates the use of the TIME and % RPN operators\n";
