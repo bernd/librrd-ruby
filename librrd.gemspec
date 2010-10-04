@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.date              = '2010-10-05'
 
   s.summary     = "Ruby bindings for librrd"
-  s.description = "Ruby bindings for librrd. Extracted from the rrdtool source."
+  s.description = "Ruby bindings for librrd. Extracted from the RRDtool source."
 
   s.authors  = ["Bernd Ahlers"]
   s.email    = 'bernd@tuneafish.de'

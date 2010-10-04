@@ -3,8 +3,8 @@ librrd
 
 # Description
 
-This gem includes the [rrdtool](http://www.mrtg.org/rrdtool/) Ruby bindings from
-the rrdtool sources. It should help people that are unable to use or don't have
+This gem includes the [RRDtool](http://www.mrtg.org/rrdtool/) Ruby bindings from
+the RRDtool sources. It should help people that are unable to use or don't have
 some kind of `librrd-ruby` operating system package.
 
 The `extconf.rb` tries to guess the librrd version installed on your system.
@@ -46,7 +46,7 @@ Bernd Ahlers <bernd@tuneafish.de>
 
 # Copyright
 
-Since the files have been taken from the [rrdtool](http://www.mrtg.org/rrdtool/)
+Since the files have been taken from the [RRDtool](http://www.mrtg.org/rrdtool/)
 sources, all files in this project are available under the
 [GNU General Public License](http://www.gnu.org/copyleft/gpl.html). See the
 COPYING and COPYRIGHT for details.
