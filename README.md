@@ -3,9 +3,9 @@ librrd
 
 # Description
 
-This gem includes the [rrdtool](http://www.mrtg.org/rrdtool/) Ruby bindings.
-It got created because it's difficult to get the rrdtool bindings if you don't
-use the Ruby distribution included in your package system.
+This gem includes the [rrdtool](http://www.mrtg.org/rrdtool/) Ruby bindings from
+the rrdtool sources. It should help people that are unable to use or don't have
+some kind of `librrd-ruby` operating system package.
 
 The `extconf.rb` tries to guess the librrd version installed on your system.
 If it doesn't work, please try to adjust the `ext/librrd/extconf.rb` file
