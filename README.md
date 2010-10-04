@@ -15,6 +15,13 @@ The following systems have been tested.
 
 * Ubuntu 10.04 LTS (librrd-1.3.8)
 
+# Installation
+
+Make sure you have the development package of `librrd` installed.
+(like `librrd-dev` on Debian/Ubuntu) Then you can just `gem install`.
+
+        gem install librrd
+
 # Contribute
 
 Please test the gem on different systems and report success and/or failure.
