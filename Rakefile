@@ -46,35 +46,7 @@ end
 #
 #############################################################################
 
-task :default => :test
-
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-end
-
-desc "Generate RCov test coverage and open in your browser"
-task :coverage do
-  require 'rcov'
-  sh "rm -fr coverage"
-  sh "rcov test/test_*.rb"
-  sh "open coverage/index.html"
-end
-
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "#{name} #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end
-
-desc "Open an irb session preloaded with this library"
-task :console do
-  sh "irb -rubygems -r ./lib/#{name_path}.rb"
-end
+task :default => :gemspec
 
 #############################################################################
 #
@@ -111,7 +83,7 @@ task :build => :gemspec do
 end
 
 desc "Update gemspec with the latest version and file list"
-task :gemspec => :validate do
+task :gemspec do
   # read spec file and split out manifest section
   spec = File.read(gemspec_file)
   head, manifest, tail = spec.split("  # = MANIFEST =\n")
@@ -137,11 +109,4 @@ task :gemspec => :validate do
   spec = [head, manifest, tail].join("  # = MANIFEST =\n")
   File.open(gemspec_file, 'w') { |io| io.write(spec) }
   puts "Updated #{gemspec_file}"
-end
-
-task :validate do
-  unless Dir['VERSION*'].empty?
-    puts "A `VERSION` file at root level violates Gem best practices."
-    #exit!
-  end
 end
