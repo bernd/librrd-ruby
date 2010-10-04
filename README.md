@@ -15,6 +15,13 @@ The following systems have been tested.
 
 * Ubuntu 10.04 LTS (librrd-1.3.8)
 
+The following Ruby versions have been tested with [RVM](http://rvm.beginrescueend.com/).
+
+* ruby 1.9.2p0
+* ruby 1.8.7p302
+* rubinius 1.1.0
+* ruby-enterpriseedition 1.8.7 2010.02
+
 # Installation
 
 Make sure you have the development package of `librrd` installed.
