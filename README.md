@@ -11,16 +11,14 @@ The `extconf.rb` tries to guess the librrd version installed on your system.
 If it doesn't work, please try to adjust the `ext/librrd/extconf.rb` file
 and submit a pull request or open an issue.
 
-The following systems have been tested.
+The following systems, RRDtool versions and Ruby versions  have been tested.
 
-* Ubuntu 10.04 LTS (librrd-1.3.8)
-
-The following Ruby versions have been tested with [RVM](http://rvm.beginrescueend.com/).
-
-* ruby 1.9.2p0
-* ruby 1.8.7p302
-* rubinius 1.1.0
-* ruby-enterpriseedition 1.8.7 2010.02
+* Ubuntu 10.04 LTS (RRDtool 1.3.8)
+  * Ruby 1.9.2p0, 1.8.7p302
+  * Rubinius 1.1.0
+  * ruby-enterpriseedition 1.8.7 2010.02
+* OpenBSD 4.8 (RRDtool 1.2.30)
+  * Ruby 1.9.2p0, 1.8.7p302
 
 # Installation
 
