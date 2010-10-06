@@ -1,5 +1,13 @@
 require 'mkmf'
 
+case RUBY_PLATFORM
+when /openbsd/i
+  puts "Using OpenBSD hacks"
+  $LDFLAGS += ' -L/usr/X11R6/lib'
+  find_library('z', nil)
+  find_library('freetype', nil)
+end
+
 dir_config("rrd")
 
 # Try to detect the librrd version.
