@@ -4,7 +4,8 @@
 
 #include <unistd.h>
 #include <ruby.h>
-#include "../../src/rrd_tool.h"
+#include <rrd.h>
+#include "rrd_tool.h"
 
 typedef struct string_arr_t {
     int len;
