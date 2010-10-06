@@ -7,8 +7,10 @@ dir_config("rrd")
 # or submit a pull request. Thanks!
 if have_library("rrd", "rrd_flushcached")
   src_prefix = '1.4'
-elsif have_library("rrd", "rrd_create")
+elsif have_type("rrd_info_t", "rrd.h") and have_library("rrd", "rrd_create")
   src_prefix = '1.3'
+elsif have_library("rrd", "rrd_create")
+  src_prefix = '1.2'
 else
   puts "Unsupported librrd version, abort."
   exit 1
