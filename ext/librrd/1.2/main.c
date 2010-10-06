@@ -28,7 +28,7 @@ string_arr string_arr_new(VALUE rb_strings)
     int i;
    
     Check_Type(rb_strings, T_ARRAY);
-    a.len = RARRAY(rb_strings)->len + 1;
+    a.len = RARRAY_LEN(rb_strings) + 1;
 
     a.strings = malloc(a.len * sizeof(char *));
     a.strings[0] = "dummy";     /* first element is a dummy element */
@@ -37,7 +37,7 @@ string_arr string_arr_new(VALUE rb_strings)
         VALUE v = rb_ary_entry(rb_strings, i);
         switch (TYPE(v)) {
         case T_STRING:
-            a.strings[i + 1] = strdup(STR2CSTR(v));
+            a.strings[i + 1] = strdup(StringValuePtr(v));
             break;
         case T_FIXNUM:
             snprintf(buf, 63, "%d", FIX2INT(v));
