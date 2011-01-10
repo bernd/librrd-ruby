@@ -29,6 +29,17 @@ Make sure you have the development package of `librrd` installed.
 
         gem install librrd
 
+# Developing
+
+Build the C extension:
+
+    ruby ext/librrd/extconf.rb
+    make
+
+Run the tests:
+
+    ruby test.rb
+
 # Contribute
 
 Please test the gem on different systems with different RRDtool versions
