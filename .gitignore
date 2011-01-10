@@ -1,1 +1,9 @@
 pkg
+
+# Generated when building the gem during development
+Makefile
+RRD.so
+main.o
+mkmf.log
+test.png
+test.rrd
