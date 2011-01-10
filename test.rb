@@ -16,7 +16,7 @@ RRD.create(
     rrd,
     "--start", "#{start_time - 1}",
     "--step", "300",
-	"DS:a:GAUGE:600:U:U",
+    "DS:a:GAUGE:600:U:U",
     "DS:b:GAUGE:600:U:U",
     "RRA:AVERAGE:0.5:1:300")
 puts
@@ -35,10 +35,10 @@ puts
 puts "generating graph #{name}.png"
 RRD.graph(
    "#{name}.png",
-    "--title", " RubyRRD Demo", 
+    "--title", " RubyRRD Demo",
     "--start", "#{start_time+3600}",
     "--end", "start + 1000 min",
-    "--interlace", 
+    "--interlace",
     "--imgformat", "PNG",
     "--width=450",
     "DEF:a=#{rrd}:a:AVERAGE",
@@ -60,9 +60,9 @@ puts
 if RRD.respond_to?(:xport)
   puts "xporting data from #{rrd}"
   (fstart,fend,step,col,legend,data)=RRD.xport(
-    "--start", start_time.to_s, 
-    "--end", (start_time + 300 * 300).to_s, 
-    "--step", 10.to_s, 
+    "--start", start_time.to_s,
+    "--end", (start_time + 300 * 300).to_s,
+    "--step", 10.to_s,
     "DEF:A=#{rrd}:a:AVERAGE",
     "DEF:B=#{rrd}:b:AVERAGE",
     "XPORT:A:a",
