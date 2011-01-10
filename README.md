@@ -27,7 +27,7 @@ The following systems, RRDtool versions and Ruby versions  have been tested.
 Make sure you have the development package of `librrd` installed.
 (like `librrd-dev` on Debian/Ubuntu) Then you can just `gem install`.
 
-        gem install librrd
+    gem install librrd
 
 # Developing
 
