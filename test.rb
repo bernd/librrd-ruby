@@ -74,3 +74,24 @@ end
 
 print "This script has created #{name}.png in the current directory\n";
 print "This demonstrates the use of the TIME and % RPN operators\n";
+
+# RubyGems users expect when they install a gem that:
+#
+#   "gem name" == "name they require" == "name of object in global namespace".
+#
+# Alias RRD to LibRRD, so backwards compatibility is retained, but RubyGems
+# users aren't surprised.
+#
+puts
+$: << File.expand_path(File.join(File.dirname(__FILE__), 'lib'))
+require 'librrd'
+
+if Object.const_defined?(:"LibRRD")
+  if %w(fetch dump graph update).all? {|m| LibRRD.methods.include?(m) }
+    puts "Rubygems compatibility layer present"
+  else
+    puts "Rubygems compatibility layer present, but methods not available"
+  end
+else
+  puts "Rubygems compatibility layer not present"
+end
