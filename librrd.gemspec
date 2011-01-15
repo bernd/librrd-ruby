@@ -41,8 +41,10 @@ Gem::Specification.new do |s|
     ext/librrd/1.3/main.c
     ext/librrd/1.4/main.c
     ext/librrd/extconf.rb
+    lib/librrd.rb
     librrd.gemspec
-    test.rb
+    test/test_librrd.rb
+    test/test_rrd.rb
   ]
   # = MANIFEST =
 
