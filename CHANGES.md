@@ -1,6 +1,12 @@
 ChangeLog
 =========
 
+# 1.0.0
+* Moved test.rb to test/unit tests.
+* Update development instructions. (auxesis)
+* Alias RRD to LibRRD Ruby users aren't confused about gem/library
+  naming conventions. (auxesis)
+
 # 0.2.0
 * Add RRDtool 1.2 bindings.
 * Fix build on OpenBSD.
