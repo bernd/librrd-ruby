@@ -38,7 +38,7 @@ Build the C extension:
 
 Run the tests:
 
-    ruby test.rb
+    rake test
 
 # Contribute
 
