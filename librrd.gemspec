@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   ## If your rubyforge_project name is different, then edit it and comment out
   ## the sub! line in the Rakefile
   s.name              = 'librrd'
-  s.version           = '0.2.0'
-  s.date              = '2010-10-06'
+  s.version           = '1.0.0'
+  s.date              = '2011-01-15'
 
   s.summary     = "Ruby bindings for librrd"
   s.description = "Ruby bindings for librrd. Extracted from the RRDtool source."
