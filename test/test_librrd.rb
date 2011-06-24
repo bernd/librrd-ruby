@@ -15,6 +15,9 @@ class TestLibRRD < Test::Unit::TestCase
   end
 
   def test_rrd_methods_defined
-    assert(%w(fetch dump graph update).all? {|m| LibRRD.methods.include?(m) })
+    assert(LibRRD.respond_to?(:fetch))
+    assert(LibRRD.respond_to?(:dump))
+    assert(LibRRD.respond_to?(:graph))
+    assert(LibRRD.respond_to?(:update))
   end
 end
