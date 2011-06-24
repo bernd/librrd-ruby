@@ -51,7 +51,7 @@ task :default => :test
 require 'rake/testtask'
 task :test => :build_rrd
 Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
+  test.libs << '.' << 'lib' << 'test'
   test.pattern = 'test/**/test_*.rb'
   test.verbose = false
 end
