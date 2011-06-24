@@ -67,6 +67,11 @@ end
 #
 #############################################################################
 
+desc "Cleanup compiled stuff"
+task :clean do
+  sh 'rm -f *.so *.o Makefile mkmf.log'
+  sh 'cd ext/librrd/ && rm -f *.so *.o Makefile mkmf.log'
+end
 
 
 #############################################################################
