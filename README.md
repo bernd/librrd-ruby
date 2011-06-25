@@ -35,8 +35,7 @@ Make sure you have the development package of `librrd` installed.
 
 Build the C extension:
 
-    ruby ext/librrd/extconf.rb
-    make
+    rake build_rrd
 
 Run the tests:
 
