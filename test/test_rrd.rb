@@ -6,7 +6,7 @@ class TestRRD < Test::Unit::TestCase
   def setup
     @rrd_file   = 'test.rrd'
     @png_file   = "#{File.basename(@rrd_file, '.rrd')}.png"
-    @start_time = Time.parse('2011-01-15').to_i
+    @start_time = 1295046000
     @end_time   = @start_time + 300 * 300
   end
 
