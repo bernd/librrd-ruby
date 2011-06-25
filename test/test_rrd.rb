@@ -65,11 +65,11 @@ class TestRRD < Test::Unit::TestCase
     if RRD.respond_to?(:xport)
       assert_nothing_raised do
         fstart, fend, step, col, legend, data = RRD.xport(
-          "--start", start_time.to_s,
-          "--end", (start_time + 300 * 300).to_s,
+          "--start", @start_time.to_s,
+          "--end", (@start_time + 300 * 300).to_s,
           "--step", 10.to_s,
-          "DEF:A=#{rrd}:a:AVERAGE",
-          "DEF:B=#{rrd}:b:AVERAGE",
+          "DEF:A=#{@rrd_file}:a:AVERAGE",
+          "DEF:B=#{@rrd_file}:b:AVERAGE",
           "XPORT:A:a",
           "XPORT:B:b"
         )
