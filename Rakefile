@@ -80,7 +80,7 @@ end
 #
 #############################################################################
 
-desc "Update gemspec, build gem, commit with 'Release x.x.x', create tag, push to github and gemcutter"
+desc "Update gemspec, build gem, commit with 'Release #{version}', create tag, push to github and gemcutter"
 task :release => :build do
   unless `git branch` =~ /^\* master$/
     puts "You must be on the master branch to release!"
