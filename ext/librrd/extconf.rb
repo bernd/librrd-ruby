@@ -6,6 +6,9 @@ when /openbsd/i
   $LDFLAGS += ' -L/usr/X11R6/lib'
   find_library('z', nil)
   find_library('freetype', nil)
+when /darwin/i
+  puts "Mac OS X"
+  $INCFLAGS += ' -I/usr/local/include'
 end
 
 dir_config("rrd")
