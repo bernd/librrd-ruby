@@ -23,6 +23,8 @@ The following systems, RRDtool versions and Ruby versions  have been tested.
   * ruby-enterpriseedition 1.8.6 20090610
 * OpenBSD 4.8 (RRDtool 1.2.30)
   * Ruby 1.9.2p0, 1.8.7p302
+* Mac OS X 10.7.2 (RRDtool 1.4.5, Homebrew)
+  * Ruby 1.9.3p0
 
 # Installation
 
