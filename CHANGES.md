@@ -1,6 +1,9 @@
 ChangeLog
 =========
 
+# 1.0.2
+* Backport rev 2206 from svn to fix a problem with RRD.xport.
+
 # 1.0.1
 * Mac OS X changes to build with rrdtool from Homebrew. (aia)
 * Unbreak test setup for ruby 1.9.2.
