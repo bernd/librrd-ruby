@@ -1,6 +1,9 @@
 ChangeLog
 =========
 
+# 1.0.3
+* Update 1.4.x binding to rrdtool-1.4.7.
+
 # 1.0.2
 * Backport rev 2206 from svn to fix a problem with RRD.xport.
 
