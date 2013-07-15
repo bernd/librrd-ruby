@@ -13,6 +13,8 @@ end
 
 dir_config("rrd")
 
+$CFLAGS += " -Wno-error=format-security"
+
 # Try to detect the librrd version.
 # Please adjust if needed and open an issue on github
 # or submit a pull request. Thanks!
