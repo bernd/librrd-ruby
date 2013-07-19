@@ -1,6 +1,9 @@
 ChangeLog
 =========
 
+# 1.0.4
+* Update 1.4.x binding to rrdtool-1.4.8.
+
 # 1.0.3
 * Update 1.4.x binding to rrdtool-1.4.7.
 
