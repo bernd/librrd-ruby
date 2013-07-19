@@ -19,6 +19,8 @@ The following systems, RRDtool versions and Ruby versions  have been tested.
   * ruby-enterpriseedition 1.8.7 2010.02
 * Ubuntu 11.04 (RRDtool 1.4.3)
   * Ruby 1.9.2p180, Ruby 1.8.7p334
+* Ubuntu 13.04 (RRDtool 1.4.7)
+  * Ruby 1.9.3p194
 * CentOS 5.5 (RRDtool 1.2.27)
   * ruby-enterpriseedition 1.8.6 20090610
 * OpenBSD 4.8 (RRDtool 1.2.30)
