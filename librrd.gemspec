@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.name              = 'librrd'
   s.version           = '1.0.4'
   s.date              = '2013-07-19'
+  s.license           = 'GPL-2'
 
   s.summary     = "Ruby bindings for librrd"
   s.description = "Ruby bindings for librrd. Extracted from the RRDtool source."
